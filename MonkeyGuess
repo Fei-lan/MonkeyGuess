@@ -1,0 +1,25 @@
+from sys import exit
+
+def Guess_number(number):
+    while True:
+        guess_number=int(input(">>>guesss_number:  "))
+        if guess_number>number:
+            print("how high! guess again:")
+        elif guess_number<number:
+            print("how low! guess again:")
+        else :
+            print("That is it!")
+            return
+
+thinking_number=25
+print("I'm thinking of a number!")
+print("Try to guess the number:")
+Guess_number(thinking_number)
+print("would you like to play again?(yes/no)")
+next_number=input(">>>")
+if next_number=="yes":
+    Guess_number(thinking_number)
+elif next_number=="no":
+    print("thanks for playing!")
+else :
+    exit(0)
